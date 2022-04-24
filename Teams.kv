@@ -1,0 +1,62 @@
+MDScreen:
+    id: teams
+    name: 'teams'
+
+    Image:
+        source: 'D:\Python\Game_kivyMD\ekywalky1.jpeg'
+        pos_hint: {'center_x': .5, "center_y": .9}
+        size_hint_x: .8
+
+    MDLabel:
+        pos_hint: {'center_x': .5, "center_y": .75}
+        text: 'ИМЕНА КОМАНД:'
+        halign: 'center'
+
+    MDFloatLayout:
+
+
+        TextInput:
+            id: team1
+            #mode: 'fill'
+            background_color: 1, 1, 0, .7
+            pos_hint: {'center_x': .5, "center_y": .65}
+            text: 'ЖЕЛТЫЕ'
+            hint_text: "Команда 1"
+            size_hint: .8, None
+            height: "30dp"
+
+        TextInput:
+            id: team2
+            background_color: 0, 0, 1, .5
+            pos_hint: {'center_x': .5, "center_y": .55}
+            text: 'СИНИЕ'
+            helper_text: "Команда 2"
+            size_hint: .8, None
+            height: "30dp"
+
+        TextInput:
+            id: team3
+            background_color: 0, 1, 0, .5
+            pos_hint: {'center_x': .5, "center_y": .45}
+            text: 'ЗЕЛЕНЫЕ'
+            helper_text: "Команда 3"
+            size_hint: .8, None
+            height: "30dp"
+
+        TextInput:
+            id: team4
+            background_color: 1, 0, 0, .5
+            pos_hint: {'center_x': .5, "center_y": .35}
+            text: 'КРАСНЫЕ'
+            helper_text: "Команда 4"
+            size_hint: .8, None
+            height: "30dp"
+
+        TextInput:
+            id: team5
+            background_color: 1, .25, 0, .5
+            pos_hint: {'center_x': .5, "center_y": .25}
+            text: 'ОРАНЖЕВЫЕ'
+            helper_text: "Команда 5"
+            size_hint: .8, None
+            height: "30dp"

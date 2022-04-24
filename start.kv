@@ -1,0 +1,40 @@
+MDScreen:
+    title: 'Главное окно'
+    name: 'start'
+    Image:
+        source: 'D:\Python\Game_kivyMD\ekywalky1.jpeg'
+        pos_hint: {'center_x': .5, "center_y": .9}
+        size_hint_x: .8
+    MDFloatLayout:
+        MDLabel:
+            text: 'ЧИСЛО КОМАНД'
+            pos_hint: {'center_x': .5, 'center_y': .7}
+            halign: 'center'
+            font_style: 'H6'
+        MDSlider:
+            id: slider
+            max: 5
+            min: 2
+            pos_hint: {'center_x': .5, "center_y": .5}
+            size_hint: .6, .1
+        MDLabel:
+            text: str(int(slider.value))
+            pos_hint: {'center_x': .5, "center_y": .6}
+            halign: 'center'
+            font_style: 'H4'
+    MDFillRoundFlatButton:
+        text: 'Команды'
+        size_hint: .6, .075
+        pos_hint: {'center_x': .5, "center_y": .2}
+        on_release:
+            app.set_teams()
+            #root.manager.transition.direction = 'right'
+            #root.manager.current = 'teams'
+    MDFillRoundFlatButton:
+        text: 'Играть'
+        size_hint: .6, .075
+        pos_hint: {'center_x': .5, "center_y": .1}
+        on_release:
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'ready'
+

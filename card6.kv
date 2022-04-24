@@ -1,0 +1,76 @@
+MDScreen:
+    id: card6
+    name: 'card6'
+
+    MDFloatLayout:
+        MDCard:
+            size_hint: .8, .7
+            md_bg_color: 1, 1, 1, 1
+            pos_hint: {"center_x": .5, "center_y": .6}
+
+            MDBoxLayout:
+                orientation:'vertical'
+                #md_bg_color: 1, .2, .5, .5
+
+                MDFloatLayout:
+                    md_bg_color: 1, .2, .3, 0.5
+                    orientation:'horizontal'
+                    size_hint: 1, .3
+
+                    MDIcon:
+                        pos_hint: {"center_x": .1, "center_y": .5}
+                        icon: app.new_card.icon
+                        #size_hint: .2, 1
+                        halign: 'center'
+
+                    MDLabel:
+                        #md_bg_color: 1, .2, .5, 0.5
+                        text: app.new_card.theme
+                        #size_hint: 1, 1
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        halign: 'center'
+
+                MDBoxLayout:
+                    md_bg_color: 1, 1, .5, .5
+                    #size_hint: 1, .8
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    #line_color: 0, 0, 1, 1
+
+                    MDLabel:
+                        id: word
+                        text: app.new_card.word
+                        theme_text_color: "Custom"
+                        text_color: 1, 0, 0, 1
+                        halign: 'center'
+
+                MDBoxLayout:
+                    md_bg_color: 1, .2, .3, 0.5
+                    size_hint: 1, 1
+
+                    MDLabel:
+                        size_hint: .9, .6
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        text: app.new_card.desc
+                        font_style: 'Caption'
+                        halign: 'center'
+                        valign: 'top'
+
+                MDBoxLayout:
+                    md_bg_color: 1, 1, 1, 1
+                    size_hint: 1, .8
+
+
+    MDFillRoundFlatButton:
+        text: 'Угадали?'
+        font_style: 'Subtitle1'
+        size_hint: .6, .075
+        pos_hint: {'center_x': .5, "center_y": .2}
+
+    MDFillRoundFlatButton:
+        text: 'Не угадали'
+        size_hint: .6, .075
+        pos_hint: {'center_x': .5, "center_y": .1}
+        font_style: 'Subtitle1'
+        # Передаем на исполнение третьему файлу
+        # on_press: app.test('Anton')
+        on_release: app.quit()
